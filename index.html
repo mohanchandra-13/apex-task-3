@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
+    <title>Joke Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My Responsive Website</h1>
-    </header>
-
-    <div class="container">
-        <div class="column">
-            <h2>Column 1</h2>
-            <p>This is the first column. On desktop, it will sit next to the second column. On smaller screens, it will stack on top.</p>
+    <div id="joke-container">
+        <h1>Joke Generator</h1>
+        <div id="joke-box">
+            <p id="joke-text">Click the button to get a joke!</p>
         </div>
-        <div class="column">
-            <h2>Column 2</h2>
-            <p>This is the second column. We're using a media query to change its layout for different screen sizes.</p>
-        </div>
+        <button id="fetch-button">Get a New Joke</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

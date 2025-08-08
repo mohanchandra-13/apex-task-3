@@ -1,42 +1,72 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
     color: #333;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Allows columns to wrap to the next line */
-    justify-content: center;
-    padding: 20px;
-}
-
-.column {
+#joke-container {
     background-color: white;
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box; /* Includes padding and border in the element's total width */
-    flex: 1; /* Each column takes up equal space */
-    min-width: 300px; /* Minimum width for each column */
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
 }
 
-/* Media Query for smaller screens (tablets and mobile) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack columns vertically */
-    }
+#joke-container:hover {
+    transform: translateY(-5px);
+}
 
-    .column {
-        min-width: 100%;
-    }
+h1 {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+#joke-box {
+    background-color: #e8f0fe;
+    border: 2px solid #a4c4fd;
+    border-radius: 8px;
+    padding: 2rem;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#joke-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#fetch-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#fetch-button:hover {
+    background-color: #357ae8;
+    transform: translateY(-2px);
+}
+
+#fetch-button:active {
+    transform: translateY(0);
 }
